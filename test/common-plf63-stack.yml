@@ -12,10 +12,10 @@ services:
   exo:
     image: exoplatform/exo:develop
     environment:
-      EXO_DB_NAME: exo
-      EXO_DB_USER: exo
-      EXO_DB_PASSWORD: exo
-      EXO_DB_HOST: db
+      EXO_DB_NAME: defaultdb
+      EXO_DB_USER: doadmin
+      EXO_DB_PASSWORD: AVNS_dQ3AQou4N2ES69w
+      EXO_DB_HOST: db01-do-user-11367548-0.b.db.ondigitalocean.com
       EXO_DB_POOL_IDM_INIT_SIZE: 1
       EXO_DB_POOL_IDM_MAX_SIZE: 30
       EXO_DB_POOL_JCR_INIT_SIZE: 2
@@ -49,10 +49,10 @@ services:
   mysql:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: my-secret-pw
-      MYSQL_DATABASE: exo
-      MYSQL_USER: exo
-      MYSQL_PASSWORD: exo
+      MYSQL_ROOT_PASSWORD: AVNS_dQ3AQou4N2ES69w
+      MYSQL_DATABASE: defaultdb
+      MYSQL_USER: doadmin
+      MYSQL_PASSWORD: AVNS_dQ3AQou4N2ES69w
     # mysql native password is needed to avoid ssl key errors with the default configuration
     command: --default-authentication-plugin=mysql_native_password
     volumes:
