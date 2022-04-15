@@ -47,10 +47,10 @@ services:
       EXO_CLUSTER_HOSTS: "name=node1,address=exo-cluster-node1 name=node2,address=exo-cluster-node2"
       # MySQL DB
       EXO_DB_TYPE: mysql
-      EXO_DB_NAME: exo
-      EXO_DB_USER: exo
-      EXO_DB_PASSWORD: exo
-      EXO_DB_HOST: exo-db
+      EXO_DB_NAME: defaultdb
+      EXO_DB_USER: doadmin
+      EXO_DB_PASSWORD: AVNS_dQ3AQou4N2ES69w
+      EXO_DB_HOST: db01-do-user-11367548-0.b.db.ondigitalocean.com
       # Store files in RDBMS to simplify cluster setup
       EXO_FILE_STORAGE_TYPE: "rdbms"
       EXO_JCR_DB_STORAGE_ENABLED: "false"
@@ -112,10 +112,10 @@ services:
       EXO_CLUSTER_HOSTS: "name=node1,address=exo-cluster-node1 name=node2,address=exo-cluster-node2"
       # MySQL DB
       EXO_DB_TYPE: mysql
-      EXO_DB_NAME: exo
-      EXO_DB_USER: exo
-      EXO_DB_PASSWORD: exo
-      EXO_DB_HOST: exo-db
+      EXO_DB_NAME: defaultdb
+      EXO_DB_USER: doadmin
+      EXO_DB_PASSWORD: AVNS_dQ3AQou4N2ES69w
+      EXO_DB_HOST: db01-do-user-11367548-0.b.db.ondigitalocean.com
       # Store files in RDBMS to simplify cluster setup
       EXO_FILE_STORAGE_TYPE: "rdbms"
       EXO_JCR_DB_STORAGE_ENABLED: "false"
@@ -181,10 +181,10 @@ services:
     volumes:
       - ./data/mysql/:/var/lib/mysql/:rw
     environment:
-      MYSQL_ROOT_PASSWORD: my-secret-pw
-      MYSQL_DATABASE: exo
-      MYSQL_USER: exo
-      MYSQL_PASSWORD: exo
+      MYSQL_ROOT_PASSWORD: AVNS_dQ3AQou4N2ES69w
+      MYSQL_DATABASE: defaultdb
+      MYSQL_USER: doadmin
+      MYSQL_PASSWORD: AVNS_dQ3AQou4N2ES69w
     healthcheck:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
       timeout: 5s
