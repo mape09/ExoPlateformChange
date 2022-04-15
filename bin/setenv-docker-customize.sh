@@ -788,7 +788,7 @@ case "${EXO_DB_TYPE}" in
     wait-for ${EXO_DB_HOST}:${EXO_DB_PORT} -s -t ${EXO_DB_TIMEOUT}
     if [ $? != 0 ]; then
       echo "[ERROR] The ${EXO_DB_TYPE} database ${EXO_DB_HOST}:${EXO_DB_PORT} was not available within ${EXO_DB_TIMEOUT}s ! eXo startup aborted ..."
-      exit 1
+      
     else
       echo "Database ${EXO_DB_TYPE} is available, continue starting..."
     fi
@@ -798,7 +798,7 @@ case "${EXO_DB_TYPE}" in
     wait-for ${EXO_DB_HOST}:${EXO_DB_PORT} -s -t ${EXO_DB_TIMEOUT}
     if [ $? != 0 ]; then
       echo "[ERROR] The ${EXO_DB_TYPE} database ${EXO_DB_HOST}:${EXO_DB_PORT} was not available within ${EXO_DB_TIMEOUT}s ! eXo startup aborted ..."
-      exit 1
+      
     else
       echo "Database ${EXO_DB_TYPE} is available, continue starting..."
     fi
@@ -811,7 +811,7 @@ if [ -f /opt/exo/addons/statuses/exo-chat.status && "${EXO_CHAT_SERVER_STANDALON
   wait-for ${EXO_MONGO_HOST}:${EXO_MONGO_PORT} -s -t ${EXO_MONGO_TIMEOUT}
   if [ $? != 0 ]; then
     echo "[ERROR] The mongodb database ${EXO_MONGO_HOST}:${EXO_MONGO_PORT} was not available within ${EXO_MONGO_TIMEOUT}s ! eXo startup aborted ..."
-    exit 1
+    
   else
     echo "Mongodb is available, continue starting..."
   fi
@@ -822,7 +822,7 @@ echo "Waiting for external elastic search availability at ${EXO_ES_HOST}:${EXO_E
 wait-for ${EXO_ES_HOST}:${EXO_ES_PORT} -s -t ${EXO_ES_TIMEOUT}
 if [ $? != 0 ]; then
   echo "[ERROR] The external elastic search ${EXO_ES_HOST}:${EXO_ES_PORT} was not available within ${EXO_ES_TIMEOUT}s ! eXo startup aborted ..."
-  exit 1
+  
 else
   echo "Elasticsearch is available, continue starting..."
 fi
