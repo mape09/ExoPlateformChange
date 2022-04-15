@@ -82,19 +82,19 @@ case "${EXO_DB_TYPE}" in
     sleep 2
     ;;
   mysql)
-    [ -z "${EXO_DB_NAME}" ] && EXO_DB_NAME="exo"
-    [ -z "${EXO_DB_USER}" ] && EXO_DB_USER="exo"
-    [ -z "${EXO_DB_PASSWORD}" ] && EXO_DB_PASSWORD="exo"
-    [ -z "${EXO_DB_HOST}" ] && EXO_DB_HOST="db"
-    [ -z "${EXO_DB_PORT}" ] && EXO_DB_PORT="3306"
-    [ -z "${EXO_DB_MYSQL_USE_SSL}" ] && EXO_DB_MYSQL_USE_SSL="false"
+    [ -z "${EXO_DB_NAME}" ] && EXO_DB_NAME="defaultdb"
+    [ -z "${EXO_DB_USER}" ] && EXO_DB_USER="doadmin"
+    [ -z "${EXO_DB_PASSWORD}" ] && EXO_DB_PASSWORD="AVNS_dQ3AQou4N2ES69w"
+    [ -z "${EXO_DB_HOST}" ] && EXO_DB_HOST="db01-do-user-11367548-0.b.db.ondigitalocean.com"
+    [ -z "${EXO_DB_PORT}" ] && EXO_DB_PORT="25060"
+    [ -z "${EXO_DB_MYSQL_USE_SSL}" ] && EXO_DB_MYSQL_USE_SSL="true"
     ;;
   pgsql|postgres|postgresql)
-    [ -z "${EXO_DB_NAME}" ] && EXO_DB_NAME="exo"
-    [ -z "${EXO_DB_USER}" ] && EXO_DB_USER="exo"
-    [ -z "${EXO_DB_PASSWORD}" ] && EXO_DB_PASSWORD="exo"
-    [ -z "${EXO_DB_HOST}" ] && EXO_DB_HOST="db"
-    [ -z "${EXO_DB_PORT}" ] && EXO_DB_PORT="5432"
+    [ -z "${EXO_DB_NAME}" ] && EXO_DB_NAME="defaultdb"
+    [ -z "${EXO_DB_USER}" ] && EXO_DB_USER="doadmin"
+    [ -z "${EXO_DB_PASSWORD}" ] && EXO_DB_PASSWORD="AVNS_dQ3AQou4N2ES69w"
+    [ -z "${EXO_DB_HOST}" ] && EXO_DB_HOST="db01-do-user-11367548-0.b.db.ondigitalocean.com"
+    [ -z "${EXO_DB_PORT}" ] && EXO_DB_PORT="25060"
     ;;
   *)
     echo "ERROR: you must provide a supported database type with EXO_DB_TYPE environment variable (current value is '${EXO_DB_TYPE}')"
