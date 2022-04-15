@@ -5,7 +5,7 @@ services:
       file: common-plf43-stack.yml
       service: web
     ports: 
-      - "80:80"
+      - "25060"
     links:
       - exo
     depends_on: 
