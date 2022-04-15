@@ -47,7 +47,7 @@ services:
   mysql:
     image: mysql:5.6
     environment:
-      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_ROOT_PASSWORD: AVNS_dQ3AQou4N2ES69w
       MYSQL_DATABASE: defaultdb
       MYSQL_USER: doadmin
       MYSQL_PASSWORD: AVNS_dQ3AQou4N2ES69w
